@@ -14,6 +14,7 @@
 		4EA63F481CEB456F00807710 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4EA63F461CEB456F00807710 /* LaunchScreen.storyboard */; };
 		4EA63F531CEB456F00807710 /* ios_multitalkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EA63F521CEB456F00807710 /* ios_multitalkTests.swift */; };
 		4EA63F5E1CEB456F00807710 /* ios_multitalkUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EA63F5D1CEB456F00807710 /* ios_multitalkUITests.swift */; };
+		53B46B6006E0128869266049 /* Pods_ios_multitalk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9814CF24F985DB713C3E8197 /* Pods_ios_multitalk.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,9 @@
 		4EA63F591CEB456F00807710 /* ios-multitalkUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ios-multitalkUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4EA63F5D1CEB456F00807710 /* ios_multitalkUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ios_multitalkUITests.swift; sourceTree = "<group>"; };
 		4EA63F5F1CEB456F00807710 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9814CF24F985DB713C3E8197 /* Pods_ios_multitalk.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ios_multitalk.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9F891F8175009FCA64B6F732 /* Pods-ios-multitalk.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ios-multitalk.release.xcconfig"; path = "Pods/Target Support Files/Pods-ios-multitalk/Pods-ios-multitalk.release.xcconfig"; sourceTree = "<group>"; };
+		AB548910D0C7EBA2CAC1DF32 /* Pods-ios-multitalk.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ios-multitalk.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ios-multitalk/Pods-ios-multitalk.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +58,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				53B46B6006E0128869266049 /* Pods_ios_multitalk.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,6 +79,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2AF42F36A133E0FBEE4C2E99 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				AB548910D0C7EBA2CAC1DF32 /* Pods-ios-multitalk.debug.xcconfig */,
+				9F891F8175009FCA64B6F732 /* Pods-ios-multitalk.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		4EA63F311CEB456F00807710 = {
 			isa = PBXGroup;
 			children = (
@@ -81,6 +95,8 @@
 				4EA63F511CEB456F00807710 /* ios-multitalkTests */,
 				4EA63F5C1CEB456F00807710 /* ios-multitalkUITests */,
 				4EA63F3B1CEB456F00807710 /* Products */,
+				2AF42F36A133E0FBEE4C2E99 /* Pods */,
+				76D429D5AB9FC63060BB306A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -125,6 +141,14 @@
 			path = "ios-multitalkUITests";
 			sourceTree = "<group>";
 		};
+		76D429D5AB9FC63060BB306A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9814CF24F985DB713C3E8197 /* Pods_ios_multitalk.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -132,9 +156,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4EA63F621CEB456F00807710 /* Build configuration list for PBXNativeTarget "ios-multitalk" */;
 			buildPhases = (
+				6F376D489C5AE8DC95206CB2 /* 📦 Check Pods Manifest.lock */,
 				4EA63F361CEB456F00807710 /* Sources */,
 				4EA63F371CEB456F00807710 /* Frameworks */,
 				4EA63F381CEB456F00807710 /* Resources */,
+				8424F30E97D7C4F852E7D536 /* 📦 Embed Pods Frameworks */,
+				30FBF693D5E6BC1FF967665A /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -250,6 +277,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		30FBF693D5E6BC1FF967665A /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ios-multitalk/Pods-ios-multitalk-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6F376D489C5AE8DC95206CB2 /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		8424F30E97D7C4F852E7D536 /* 📦 Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ios-multitalk/Pods-ios-multitalk-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		4EA63F361CEB456F00807710 /* Sources */ = {
@@ -399,6 +474,7 @@
 		};
 		4EA63F631CEB456F00807710 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AB548910D0C7EBA2CAC1DF32 /* Pods-ios-multitalk.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "ios-multitalk/Info.plist";
@@ -410,6 +486,7 @@
 		};
 		4EA63F641CEB456F00807710 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9F891F8175009FCA64B6F732 /* Pods-ios-multitalk.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "ios-multitalk/Info.plist";
@@ -484,6 +561,7 @@
 				4EA63F641CEB456F00807710 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4EA63F651CEB456F00807710 /* Build configuration list for PBXNativeTarget "ios-multitalkTests" */ = {
 			isa = XCConfigurationList;
@@ -492,6 +570,7 @@
 				4EA63F671CEB456F00807710 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4EA63F681CEB456F00807710 /* Build configuration list for PBXNativeTarget "ios-multitalkUITests" */ = {
 			isa = XCConfigurationList;
@@ -500,6 +579,7 @@
 				4EA63F6A1CEB456F00807710 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
