@@ -11,6 +11,7 @@ import Foundation
 class multitalkStreamPair: NSObject, NSStreamDelegate {
     var inputStream: NSInputStream
     var outputStream: NSOutputStream
+    var parentView: ViewController?
     
     var bufferpointer: UnsafeMutablePointer<UInt8>
     
@@ -23,7 +24,11 @@ class multitalkStreamPair: NSObject, NSStreamDelegate {
             NSLog("Stream error occured")
         case NSStreamEvent.HasBytesAvailable:
             if inputStream == aStream {
-                print(readAll())
+                let string = readAll()
+                if let unwrappedParent = parentView {
+                    unwrappedParent.input = string;
+                    unwrappedParent.updateTextView();
+                }
             }
         case NSStreamEvent.HasSpaceAvailable:
             if outputStream == aStream {

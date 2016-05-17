@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -16,11 +17,50 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="bmS-XG-UIq">
+                                <rect key="frame" x="58" y="69" width="484" height="415"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="G6A-bl-VG9">
+                                <rect key="frame" x="58" y="510" width="440" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3c3-mT-1xt">
+                                <rect key="frame" x="506" y="510" width="36" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="36" id="CJd-wy-6EY"/>
+                                </constraints>
+                                <state key="normal" title="Send"/>
+                                <connections>
+                                    <action selector="pushButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="oUq-sK-NcU"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="bmS-XG-UIq" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="JYw-Ig-ZRV"/>
+                            <constraint firstItem="G6A-bl-VG9" firstAttribute="top" secondItem="bmS-XG-UIq" secondAttribute="bottom" constant="26" id="Msp-h5-dna"/>
+                            <constraint firstItem="bmS-XG-UIq" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="38" id="ZCf-ch-W3b"/>
+                            <constraint firstItem="bmS-XG-UIq" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="49" id="eLf-kN-wGM"/>
+                            <constraint firstItem="3c3-mT-1xt" firstAttribute="leading" secondItem="G6A-bl-VG9" secondAttribute="trailing" constant="8" symbolic="YES" id="fYe-WU-Znf"/>
+                            <constraint firstItem="bmS-XG-UIq" firstAttribute="trailing" secondItem="3c3-mT-1xt" secondAttribute="trailing" id="olC-PX-ebO"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="G6A-bl-VG9" secondAttribute="bottom" constant="60" id="qcl-Ha-Eh7"/>
+                            <constraint firstItem="G6A-bl-VG9" firstAttribute="top" secondItem="3c3-mT-1xt" secondAttribute="top" id="wGF-z2-BIm"/>
+                            <constraint firstItem="bmS-XG-UIq" firstAttribute="leading" secondItem="G6A-bl-VG9" secondAttribute="leading" id="yAy-9M-AeZ"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="textField" destination="G6A-bl-VG9" id="3vB-5h-Jh9"/>
+                        <outlet property="textView" destination="bmS-XG-UIq" id="TLA-IY-i0d"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="565" y="549"/>
         </scene>
     </scenes>
 </document>
