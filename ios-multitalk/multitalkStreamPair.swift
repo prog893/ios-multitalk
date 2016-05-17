@@ -97,8 +97,8 @@ class multitalkStreamPair: NSObject, NSStreamDelegate {
             if self.inputStream.hasBytesAvailable {
                 len = self.inputStream.read(self.bufferpointer, maxLength: 1024)
                 let data = NSData(bytes: self.bufferpointer, length: len)
-                ret += String(NSString(data: data, encoding: NSUTF8StringEncoding))
-                
+                ret += String(NSString(data: data, encoding: NSUTF8StringEncoding)!)
+                ret += "\n"
             }
         }
         
