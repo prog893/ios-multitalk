@@ -6,6 +6,7 @@
 //  Copyright © 2016 pseudobeer. All rights reserved.
 //
 
+import UIKit
 import Foundation
 
 class multitalkStreamPair: NSObject, NSStreamDelegate {
@@ -84,16 +85,21 @@ class multitalkStreamPair: NSObject, NSStreamDelegate {
     }
     
     func writeToStream(a: String) {
+        UIApplication.sharedApplication().networkActivityIndicatorVisible = true
         
         let data: NSData = a.dataUsingEncoding(NSUTF8StringEncoding)!
         outputStream.write(UnsafePointer<UInt8>(data.bytes), maxLength: data.length)
         write(1, UnsafePointer<UInt8>(data.bytes), data.length)
+        
+        UIApplication.sharedApplication().networkActivityIndicatorVisible = false
     }
     
     func readAll() -> String {
         
         var len: Int
         var ret: String = ""
+        
+        UIApplication.sharedApplication().networkActivityIndicatorVisible = true
         
         while(inputStream.hasBytesAvailable != false) {
             if self.inputStream.hasBytesAvailable {
@@ -103,6 +109,8 @@ class multitalkStreamPair: NSObject, NSStreamDelegate {
                 ret += "\n"
             }
         }
+        
+        UIApplication.sharedApplication().networkActivityIndicatorVisible = false
         
         return ret
         
