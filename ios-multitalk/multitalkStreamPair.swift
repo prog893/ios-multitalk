@@ -26,8 +26,10 @@ class multitalkStreamPair: NSObject, NSStreamDelegate {
             if inputStream == aStream {
                 let string = readAll()
                 if let unwrappedParent = parentView {
+                    unwrappedParent.recursiveLock.lockBeforeDate(NSDate(timeIntervalSinceNow: 0.5))
                     unwrappedParent.input = string;
                     unwrappedParent.updateTextView();
+                    unwrappedParent.recursiveLock.unlock()
                 }
             }
         case NSStreamEvent.HasSpaceAvailable:

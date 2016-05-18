@@ -117,11 +117,11 @@
 			children = (
 				4EA63F3D1CEB456F00807710 /* AppDelegate.swift */,
 				4EA63F3F1CEB456F00807710 /* ViewController.swift */,
+				4EC01DA21CEBA9DA004AB515 /* multitalkStreamPair.swift */,
 				4EA63F411CEB456F00807710 /* Main.storyboard */,
 				4EA63F441CEB456F00807710 /* Assets.xcassets */,
 				4EA63F461CEB456F00807710 /* LaunchScreen.storyboard */,
 				4EA63F491CEB456F00807710 /* Info.plist */,
-				4EC01DA21CEBA9DA004AB515 /* multitalkStreamPair.swift */,
 			);
 			path = "ios-multitalk";
 			sourceTree = "<group>";

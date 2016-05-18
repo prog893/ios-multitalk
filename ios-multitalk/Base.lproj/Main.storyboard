@@ -18,39 +18,51 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="bmS-XG-UIq">
-                                <rect key="frame" x="58" y="69" width="484" height="415"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="bmS-XG-UIq">
+                                <rect key="frame" x="58" y="69" width="484" height="442"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" staticText="YES" notEnabled="YES" updatesFrequently="YES"/>
+                                    <bool key="isElement" value="NO"/>
+                                </accessibility>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences" autocorrectionType="no" spellCheckingType="no"/>
                             </textView>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="G6A-bl-VG9">
-                                <rect key="frame" x="58" y="510" width="440" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3c3-mT-1xt">
-                                <rect key="frame" x="506" y="510" width="36" height="30"/>
+                                <rect key="frame" x="544" y="550" width="36" height="30"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" notEnabled="YES"/>
+                                    <bool key="isElement" value="NO"/>
+                                </accessibility>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="36" id="CJd-wy-6EY"/>
+                                    <constraint firstAttribute="width" constant="36" id="CkU-Bo-KZF"/>
                                 </constraints>
                                 <state key="normal" title="Send"/>
                                 <connections>
                                     <action selector="pushButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="oUq-sK-NcU"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="G6A-bl-VG9">
+                                <rect key="frame" x="20" y="550" width="516" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="send"/>
+                                <connections>
+                                    <action selector="touchEnter:" destination="BYZ-38-t0r" eventType="touchDragEnter" id="Phl-FX-q04"/>
+                                    <action selector="touchOutside:" destination="BYZ-38-t0r" eventType="touchDragOutside" id="bWQ-ib-E1d"/>
+                                </connections>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="bmS-XG-UIq" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="JYw-Ig-ZRV"/>
-                            <constraint firstItem="G6A-bl-VG9" firstAttribute="top" secondItem="bmS-XG-UIq" secondAttribute="bottom" constant="26" id="Msp-h5-dna"/>
-                            <constraint firstItem="bmS-XG-UIq" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="38" id="ZCf-ch-W3b"/>
-                            <constraint firstItem="bmS-XG-UIq" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="49" id="eLf-kN-wGM"/>
-                            <constraint firstItem="3c3-mT-1xt" firstAttribute="leading" secondItem="G6A-bl-VG9" secondAttribute="trailing" constant="8" symbolic="YES" id="fYe-WU-Znf"/>
-                            <constraint firstItem="bmS-XG-UIq" firstAttribute="trailing" secondItem="3c3-mT-1xt" secondAttribute="trailing" id="olC-PX-ebO"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="G6A-bl-VG9" secondAttribute="bottom" constant="60" id="qcl-Ha-Eh7"/>
-                            <constraint firstItem="G6A-bl-VG9" firstAttribute="top" secondItem="3c3-mT-1xt" secondAttribute="top" id="wGF-z2-BIm"/>
-                            <constraint firstItem="bmS-XG-UIq" firstAttribute="leading" secondItem="G6A-bl-VG9" secondAttribute="leading" id="yAy-9M-AeZ"/>
+                            <constraint firstItem="bmS-XG-UIq" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="49" id="5DH-EB-bUV"/>
+                            <constraint firstItem="3c3-mT-1xt" firstAttribute="leading" secondItem="G6A-bl-VG9" secondAttribute="trailing" constant="8" symbolic="YES" id="ZwB-bQ-bM6"/>
+                            <constraint firstAttribute="bottom" secondItem="G6A-bl-VG9" secondAttribute="bottom" constant="20" symbolic="YES" id="hsO-rb-Mnz"/>
+                            <constraint firstItem="G6A-bl-VG9" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="iqD-MU-yY1"/>
+                            <constraint firstItem="G6A-bl-VG9" firstAttribute="top" secondItem="3c3-mT-1xt" secondAttribute="top" id="jF4-wt-dJX"/>
+                            <constraint firstItem="bmS-XG-UIq" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="38" id="jUR-29-PNc"/>
+                            <constraint firstItem="G6A-bl-VG9" firstAttribute="top" secondItem="bmS-XG-UIq" secondAttribute="bottom" constant="39" id="nx5-jL-Wi1"/>
+                            <constraint firstItem="3c3-mT-1xt" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="x2y-mN-cST"/>
+                            <constraint firstItem="bmS-XG-UIq" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="z9q-Kd-wHX"/>
                         </constraints>
                     </view>
                     <connections>
