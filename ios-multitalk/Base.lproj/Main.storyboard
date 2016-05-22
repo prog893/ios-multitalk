@@ -42,7 +42,7 @@
                                 </connections>
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="bmS-XG-UIq">
-                                <rect key="frame" x="20" y="49" width="560" height="473"/>
+                                <rect key="frame" x="20" y="71" width="560" height="451"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <accessibility key="accessibilityConfiguration">
                                     <accessibilityTraits key="traits" staticText="YES" notEnabled="YES" updatesFrequently="YES"/>
@@ -54,15 +54,15 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="bmS-XG-UIq" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="8w9-vi-7XP"/>
                             <constraint firstItem="3c3-mT-1xt" firstAttribute="leading" secondItem="G6A-bl-VG9" secondAttribute="trailing" constant="24" id="CJ5-XK-kBD"/>
-                            <constraint firstItem="bmS-XG-UIq" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="29" id="HbG-Ru-0IW"/>
-                            <constraint firstItem="bmS-XG-UIq" firstAttribute="leading" secondItem="G6A-bl-VG9" secondAttribute="leading" id="eM4-4f-W2p"/>
-                            <constraint firstItem="G6A-bl-VG9" firstAttribute="top" secondItem="bmS-XG-UIq" secondAttribute="bottom" constant="28" id="kGA-qi-7om"/>
+                            <constraint firstItem="bmS-XG-UIq" firstAttribute="leading" secondItem="G6A-bl-VG9" secondAttribute="leading" id="DUK-g7-Lsn"/>
+                            <constraint firstItem="bmS-XG-UIq" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="GWB-lh-qep"/>
+                            <constraint firstItem="bmS-XG-UIq" firstAttribute="trailing" secondItem="3c3-mT-1xt" secondAttribute="trailing" id="Je2-iy-ggc"/>
+                            <constraint firstItem="bmS-XG-UIq" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="51" id="dFG-EA-d3i"/>
+                            <constraint firstItem="3c3-mT-1xt" firstAttribute="top" secondItem="bmS-XG-UIq" secondAttribute="bottom" constant="28" id="f2p-FP-VpJ"/>
                             <constraint firstItem="G6A-bl-VG9" firstAttribute="top" secondItem="3c3-mT-1xt" secondAttribute="top" id="kSI-cf-I1Z"/>
-                            <constraint firstItem="bmS-XG-UIq" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="npB-vr-AMF"/>
-                            <constraint firstItem="bmS-XG-UIq" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="pRm-Ar-2a0"/>
                             <constraint firstAttribute="bottom" secondItem="G6A-bl-VG9" secondAttribute="bottom" constant="20" symbolic="YES" id="q88-mp-avh"/>
-                            <constraint firstItem="bmS-XG-UIq" firstAttribute="trailing" secondItem="3c3-mT-1xt" secondAttribute="trailing" id="w3H-dv-EAX"/>
                         </constraints>
                     </view>
                     <connections>

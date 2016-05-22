@@ -25,7 +25,7 @@ class ViewController: UIViewController, UITextFieldDelegate, UINavigationBarDele
     @IBOutlet weak var bottomMargin: NSLayoutConstraint!
     
     @IBAction func touchOutside(sender: AnyObject) {
-        self.becomeFirstResponder()
+        self.resignFirstResponder()
     }
     
     @IBAction func touchEnter(sender: AnyObject) {
@@ -57,17 +57,30 @@ class ViewController: UIViewController, UITextFieldDelegate, UINavigationBarDele
     func keyboardWillShow(notification: NSNotification) {
         
         if let keyboardSize = (notification.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.CGRectValue() {
-            //self.view.frame.origin.y -= keyboardSize.height
+            
             self.bottomMargin.constant += keyboardSize.height
+            
+            UIView.animateWithDuration((notification.userInfo?[UIKeyboardAnimationDurationUserInfoKey] as? Double)!, animations: {
+                self.view.layoutIfNeeded()
+            })
         }
         
     }
     
     func keyboardWillHide(notification: NSNotification) {
         if let keyboardSize = (notification.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.CGRectValue() {
-            //self.view.frame.origin.y += keyboardSize.height
+            
             self.bottomMargin.constant -= keyboardSize.height
+            
+            UIView.animateWithDuration((notification.userInfo?[UIKeyboardAnimationDurationUserInfoKey] as? Double)!, animations: {
+                self.view.layoutIfNeeded()
+            })
         }
+    }
+    
+    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
+        self.textField.resignFirstResponder()
+        self.view.endEditing(true)
     }
     
     func btn_clicked(sender: UIBarButtonItem) {
@@ -90,7 +103,7 @@ class ViewController: UIViewController, UITextFieldDelegate, UINavigationBarDele
         
         // Create a navigation item with a title
         let navigationItem = UINavigationItem()
-        navigationItem.title = "MultiTalk"
+        navigationItem.title = "静 Chat"
         
         // Create left and right button for navigation item
         let leftButton =  UIBarButtonItem(title: "Profile", style:   UIBarButtonItemStyle.Plain, target: self, action: #selector(ViewController.btn_clicked(_:)))
@@ -106,8 +119,15 @@ class ViewController: UIViewController, UITextFieldDelegate, UINavigationBarDele
         // Make the navigation bar a subview of the current view controller
         self.view.addSubview(navigationBar)
         
+        self.view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(endEditingWrap)))
+        
+        
         // Do any additional setup after loading the view, typically from a nib.
         
+    }
+    
+    func endEditingWrap() {
+        self.view.endEditing(true)
     }
     
     override func viewDidAppear(animated: Bool) {
