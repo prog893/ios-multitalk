@@ -22,6 +22,7 @@ class ViewController: UIViewController, UITextFieldDelegate, UINavigationBarDele
     
     @IBOutlet var textField: UITextField!
     
+    @IBOutlet weak var bottomMargin: NSLayoutConstraint!
     
     @IBAction func touchOutside(sender: AnyObject) {
         self.becomeFirstResponder()
@@ -57,10 +58,7 @@ class ViewController: UIViewController, UITextFieldDelegate, UINavigationBarDele
         
         if let keyboardSize = (notification.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.CGRectValue() {
             //self.view.frame.origin.y -= keyboardSize.height
-            for view in self.view.subviews {
-                print(view)
-                view.frame.origin.y -= keyboardSize.height
-            }
+            self.bottomMargin.constant += keyboardSize.height
         }
         
     }
@@ -68,9 +66,7 @@ class ViewController: UIViewController, UITextFieldDelegate, UINavigationBarDele
     func keyboardWillHide(notification: NSNotification) {
         if let keyboardSize = (notification.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.CGRectValue() {
             //self.view.frame.origin.y += keyboardSize.height
-            for view in self.view.subviews {
-                view.frame.origin.y -= keyboardSize.height
-            }
+            self.bottomMargin.constant -= keyboardSize.height
         }
     }
     
