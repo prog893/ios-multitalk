@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="G6A-bl-VG9">
-                                <rect key="frame" x="20" y="550" width="516" height="30"/>
+                                <rect key="frame" x="20" y="550" width="500" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="send"/>
                                 <connections>
@@ -34,7 +34,7 @@
                                     <bool key="isElement" value="NO"/>
                                 </accessibility>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="36" id="CkU-Bo-KZF"/>
+                                    <constraint firstAttribute="width" constant="36" id="OKk-oI-E43"/>
                                 </constraints>
                                 <state key="normal" title="Send"/>
                                 <connections>
@@ -42,7 +42,7 @@
                                 </connections>
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="bmS-XG-UIq">
-                                <rect key="frame" x="20" y="69" width="560" height="454"/>
+                                <rect key="frame" x="20" y="49" width="560" height="473"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <accessibility key="accessibilityConfiguration">
                                     <accessibilityTraits key="traits" staticText="YES" notEnabled="YES" updatesFrequently="YES"/>
@@ -54,15 +54,15 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="bmS-XG-UIq" firstAttribute="leading" secondItem="G6A-bl-VG9" secondAttribute="leading" id="TnV-Ut-NLa"/>
-                            <constraint firstItem="3c3-mT-1xt" firstAttribute="leading" secondItem="G6A-bl-VG9" secondAttribute="trailing" constant="8" symbolic="YES" id="ZwB-bQ-bM6"/>
-                            <constraint firstAttribute="bottom" secondItem="G6A-bl-VG9" secondAttribute="bottom" constant="20" symbolic="YES" id="hsO-rb-Mnz"/>
-                            <constraint firstItem="G6A-bl-VG9" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="iqD-MU-yY1"/>
-                            <constraint firstItem="bmS-XG-UIq" firstAttribute="trailing" secondItem="3c3-mT-1xt" secondAttribute="trailing" id="iv9-K6-ivl"/>
-                            <constraint firstItem="G6A-bl-VG9" firstAttribute="top" secondItem="3c3-mT-1xt" secondAttribute="top" id="jF4-wt-dJX"/>
-                            <constraint firstItem="3c3-mT-1xt" firstAttribute="top" secondItem="bmS-XG-UIq" secondAttribute="bottom" constant="27" id="pPX-1x-Ipf"/>
-                            <constraint firstItem="bmS-XG-UIq" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="49" id="sN6-dD-0AY"/>
-                            <constraint firstItem="3c3-mT-1xt" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="x2y-mN-cST"/>
+                            <constraint firstItem="3c3-mT-1xt" firstAttribute="leading" secondItem="G6A-bl-VG9" secondAttribute="trailing" constant="24" id="CJ5-XK-kBD"/>
+                            <constraint firstItem="bmS-XG-UIq" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="29" id="HbG-Ru-0IW"/>
+                            <constraint firstItem="bmS-XG-UIq" firstAttribute="leading" secondItem="G6A-bl-VG9" secondAttribute="leading" id="eM4-4f-W2p"/>
+                            <constraint firstItem="G6A-bl-VG9" firstAttribute="top" secondItem="bmS-XG-UIq" secondAttribute="bottom" constant="28" id="kGA-qi-7om"/>
+                            <constraint firstItem="G6A-bl-VG9" firstAttribute="top" secondItem="3c3-mT-1xt" secondAttribute="top" id="kSI-cf-I1Z"/>
+                            <constraint firstItem="bmS-XG-UIq" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="npB-vr-AMF"/>
+                            <constraint firstItem="bmS-XG-UIq" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="pRm-Ar-2a0"/>
+                            <constraint firstAttribute="bottom" secondItem="G6A-bl-VG9" secondAttribute="bottom" constant="20" symbolic="YES" id="q88-mp-avh"/>
+                            <constraint firstItem="bmS-XG-UIq" firstAttribute="trailing" secondItem="3c3-mT-1xt" secondAttribute="trailing" id="w3H-dv-EAX"/>
                         </constraints>
                     </view>
                     <connections>

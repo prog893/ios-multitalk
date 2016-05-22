@@ -56,8 +56,9 @@ class ViewController: UIViewController, UITextFieldDelegate, UINavigationBarDele
     func keyboardWillShow(notification: NSNotification) {
         
         if let keyboardSize = (notification.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.CGRectValue() {
-            self.view.frame.origin.y -= keyboardSize.height
+            //self.view.frame.origin.y -= keyboardSize.height
             for view in self.view.subviews {
+                print(view)
                 view.frame.origin.y -= keyboardSize.height
             }
         }
@@ -66,9 +67,9 @@ class ViewController: UIViewController, UITextFieldDelegate, UINavigationBarDele
     
     func keyboardWillHide(notification: NSNotification) {
         if let keyboardSize = (notification.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.CGRectValue() {
-            self.view.frame.origin.y += keyboardSize.height
+            //self.view.frame.origin.y += keyboardSize.height
             for view in self.view.subviews {
-                view.frame.origin.y += keyboardSize.height
+                view.frame.origin.y -= keyboardSize.height
             }
         }
     }
