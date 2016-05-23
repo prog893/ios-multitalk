@@ -43,7 +43,11 @@ class ViewController: UIViewController, UITextFieldDelegate, UINavigationBarDele
         }
         recursiveLock.lockBeforeDate(NSDate(timeIntervalSinceNow: 0.5))
         
-        textView!.text! += textField!.text!
+        if textField!.text!.characters.first != "\\" {
+            textView!.text! += textField!.text!
+            textView!.text! += "\n"
+        }
+        
         textField.text = ""
         
         recursiveLock.unlock()
